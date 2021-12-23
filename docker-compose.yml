@@ -3,11 +3,12 @@ services:
   db:
     image: mysql:8.0.25
     restart: always
+    container_name: mysqlPort3008Root
     environment:
       MYSQL_DATABASE: 'traffic'
-      MYSQL_USER: 'user'
-      MYSQL_PASSWORD: 'user'
-      MYSQL_ROOT_PASSWORD: 'user'
+      MYSQL_USER: 'root'
+      MYSQL_PASSWORD: 'root'
+      MYSQL_ROOT_PASSWORD: 'root'
     ports:
       - "3008:3306"
     expose:
