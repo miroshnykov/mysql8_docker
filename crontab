@@ -1,13 +1,14 @@
 # * * * * * mkdir /tmp/co-recipe /tmp/co-recipe-traffic && chown -R miroshnykov:miroshnykov /tmp/co-recipe /tmp/co-recipe-traffic
 
+# * * * * *  chmod +x /home/miroshnykov/Sites/mysql8_docker/freeMemoryUbuntu.sh && sh /home/miroshnykov/Sites/mysql8_docker/freeMemoryUbuntu.sh >> /tmp/memory.usage.txt
+
 # */2 * * * * /home/miroshnykov/Sites/mysql8_docker/freeMemoryUbuntu.sh >> /tmp/memory.usage
 
 #every 8 hours
-0 */8 * * * /home/miroshnykov/Sites/mysql8_docker/freeMemoryUbuntu.sh >> /tmp/memory.usage.txt
+0 */8 * * * chmod +x /home/miroshnykov/Sites/mysql8_docker/freeMemoryUbuntu.sh && sh /home/miroshnykov/Sites/mysql8_docker/freeMemoryUbuntu.sh >> /tmp/memory.usage.txt
 
 # every day at 19 00
 0 19 * * * rm -rf /tmp/*
 
 # every day at 19 01
 1 19 * * * mkdir /tmp/co-recipe /tmp/co-recipe-traffic && chown -R miroshnykov:miroshnykov /tmp/co-recipe /tmp/co-recipe-traffic
-
