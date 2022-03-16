@@ -6,7 +6,7 @@ services:
     container_name: mysqlPort3014
     environment:
       MYSQL_ROOT_PASSWORD: 'root'
-      MYSQL_DATABASE: 'traffic'
+      MYSQL_DATABASE: 'traffic-2'
     ports:
       - "3014:3306"
     expose:

@@ -6,7 +6,8 @@ services:
     container_name: mysqlPort3013
     environment:
       MYSQL_ROOT_PASSWORD: 'root'
-      MYSQL_DATABASE: 'traffic'
+      MYSQL_DATABASE: 'traffic-1'
+    command: mysqld --sql_mode=""
     ports:
       - "3013:3306"
     expose:

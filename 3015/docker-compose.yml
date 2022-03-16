@@ -1,0 +1,19 @@
+version: '3.3'
+services:
+  db-port-3015:
+    image: mysql:8.0.25
+    restart: always
+    container_name: mysqlPort3015
+    environment:
+      MYSQL_ROOT_PASSWORD: 'root'
+      MYSQL_DATABASE: 'traffic-1'
+    command: mysqld --sql_mode=""
+    ports:
+      - "3015:3306"
+    expose:
+      - '3015'
+    volumes:
+      - traffic-db-3015:/var/lib/mysql
+
+volumes:
+  traffic-db-3015:
