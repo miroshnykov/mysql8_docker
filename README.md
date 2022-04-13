@@ -9,6 +9,7 @@ ssh -v -L 54399:redshift-1.stage.aezai.com:5439 -i id_rsa.pub dmytro.miroshnykov
 ```
 
 ### crontab
+#### sudo crontab -e
 ```shell script
 #every 8 hours
 0 */8 * * * chmod +x /home/miroshnykov/Sites/mysql8_docker/freeMemoryUbuntu.sh && sh /home/miroshnykov/Sites/mysql8_docker/freeMemoryUbuntu.sh >> /tmp/memory.usage.txt
